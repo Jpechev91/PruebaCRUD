@@ -13,7 +13,7 @@ export class EstadosService {
     private httpClient: HttpClient
   ) { }
 
-  public getAllEstados(): Observable<any>{
+  public getAllEstados(): Observable<any> {
     return this.httpClient.get(this.API_SERVER)
   }
 }

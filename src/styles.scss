@@ -1,4 +1,4 @@
-.formularioRegistro{
+.formularioRegistro {
   padding-left: 30%;
   padding-right: 20%;
   margin-top: 10%;
@@ -9,7 +9,7 @@
   margin: auto;
 }
 
-.custom-cardtwo{
+.custom-cardtwo {
   width: 1000px;
   margin: auto;
 }
@@ -37,7 +37,8 @@
   }
 }
 
-.form-control, p-dropdown {
+.form-control,
+p-dropdown {
   width: 100%;
 }
 
@@ -46,13 +47,9 @@
 }
 
 .btn-separado {
-  margin-right: 10px; /* Ajusta este valor según sea necesario */
+  margin-right: 10px;
 }
 
-/* Si prefieres un margen izquierdo en el segundo botón */
-.btn-separado + .btn-separado {
-  margin-left: 10px; /* Ajusta este valor según sea necesario */
+.btn-separado+.btn-separado {
+  margin-left: 10px;
 }
-
-
-

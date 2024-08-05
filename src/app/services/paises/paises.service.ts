@@ -13,7 +13,7 @@ export class PaisesService {
     private httpClient: HttpClient
   ) { }
 
-  public getAllPaises(): Observable<any>{
+  public getAllPaises(): Observable<any> {
     return this.httpClient.get(this.API_SERVER)
   }
 }

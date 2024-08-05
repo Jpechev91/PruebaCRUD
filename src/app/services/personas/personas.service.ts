@@ -13,15 +13,15 @@ export class PersonasService {
     private httpClient: HttpClient
   ) { }
 
-  public getAllPersonas(): Observable<any>{
+  public getAllPersonas(): Observable<any> {
     return this.httpClient.get(this.API_SERVER);
   }
 
-  public savePersona (persona:any): Observable<any>{
-    return this.httpClient.post(this.API_SERVER,persona);
+  public savePersona(persona: any): Observable<any> {
+    return this.httpClient.post(this.API_SERVER, persona);
   }
 
-  public deletePersona(idPersona:any):Observable<any>{
+  public deletePersona(idPersona: any): Observable<any> {
     return this.httpClient.delete(this.API_SERVER + "delete/" + idPersona);
   }
 }

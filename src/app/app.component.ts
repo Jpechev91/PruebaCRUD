@@ -70,7 +70,7 @@ export class AppComponent implements OnInit {
         };
       });
     },
-    error => { console.error(error) }
+      error => { console.error(error) }
     );
   }
 
@@ -83,13 +83,13 @@ export class AppComponent implements OnInit {
     )
   }
 
-  delete(persona:any){
-    this.personaService.deletePersona(persona.idPersona).subscribe(resp=>{
+  delete(persona: any) {
+    this.personaService.deletePersona(persona.idPersona).subscribe(resp => {
       this.cargarPersonas();
     })
   }
 
-  edit(persona: any){
+  edit(persona: any) {
     this.personaForm.setValue({
       idPersona: persona.idPersona,
       nombreCompleto: persona.nombreCompleto,

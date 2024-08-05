@@ -30,45 +30,47 @@
         </div>
         <div class="form-group">
           <label for="inputtext">Estado:</label><br>
-          <p-dropdown id="estado" formControlName="estado" [options]="estados" optionLabel="nombreEstado" optionValue="idEstado">
+          <p-dropdown id="estado" formControlName="estado" [options]="estados" optionLabel="nombreEstado"
+            optionValue="idEstado">
           </p-dropdown>
         </div>
       </div>
       <button pButton type="submit" class="btn btn-primary" [disabled]="personaForm.invalid">Guardar</button>
     </form>
   </div>
-  </p-card><br>
+</p-card><br>
 <p-card styleClass="custom-cardtwo">
-<div>
-  <h2>Lista de Personas</h2>
-  <p-table [value]="personasConDetalles" [paginator]="true" [rows]="10">
-    <ng-template pTemplate="header">
-      <tr>
-        <th>ID</th>
-        <th>Nombre Completo</th>
-        <th>Apellidos</th>
-        <th>Edad</th>
-        <th>País</th>
-        <th>Estado</th>
-        <th>OPCIONES</th>
-      </tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-persona>
-      <tr>
-        <td>{{persona.idPersona}}</td>
-        <td>{{persona.nombreCompleto}}</td>
-        <td>{{persona.apellidos}}</td>
-        <td>{{persona.edad}}</td>
-        <td>{{persona.paisNombre}}</td>
-        <td>{{persona.estadoNombre}}</td>
-        <td>
-          <button pButton type="button" class="btn btn-primary btn-separado" (click)="edit(persona)">Editar</button>
-          <button pButton type="button" class="p-button-danger btn-separado" (click)="delete(persona)">Eliminar</button>
-        </td>
-      </tr>
-    </ng-template>
-  </p-table>
-</div>
+  <div>
+    <h2>Lista de Personas</h2>
+    <p-table [value]="personasConDetalles" [paginator]="true" [rows]="10">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>ID</th>
+          <th>Nombre Completo</th>
+          <th>Apellidos</th>
+          <th>Edad</th>
+          <th>País</th>
+          <th>Estado</th>
+          <th>OPCIONES</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-persona>
+        <tr>
+          <td>{{persona.idPersona}}</td>
+          <td>{{persona.nombreCompleto}}</td>
+          <td>{{persona.apellidos}}</td>
+          <td>{{persona.edad}}</td>
+          <td>{{persona.paisNombre}}</td>
+          <td>{{persona.estadoNombre}}</td>
+          <td>
+            <button pButton type="button" class="btn btn-primary btn-separado" (click)="edit(persona)">Editar</button>
+            <button pButton type="button" class="p-button-danger btn-separado"
+              (click)="delete(persona)">Eliminar</button>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
 </p-card>
 
 <router-outlet></router-outlet>
